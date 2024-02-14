@@ -22,7 +22,7 @@ jobs:
           pip install pytest
       - name: Run Unit Tests
         run: |
-          coverage run -m pytest src/tests/
+          coverage run pytest src/tests/
 
 
 
