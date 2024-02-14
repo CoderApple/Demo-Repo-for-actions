@@ -20,7 +20,7 @@ jobs:
           pip install pytest
       - name: Enter the folder
         run: |
-          cd src/tests/
+          cd BreadcrumbsDemo-Repo-for-actions/src/tests/
       - name: Check the folder
         run: |
           pwd
