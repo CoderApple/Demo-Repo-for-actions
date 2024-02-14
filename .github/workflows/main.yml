@@ -21,7 +21,7 @@ jobs:
       - name: Enter the folder
         run: |
           git clone https://github.com/CoderApple/Demo-Repo-for-actions.git
-          cd /home/runner/work/Demo-Repo-for-actions/Demo-Repo-for-actions/src/tests
+          cd /home/runner/work/Demo-Repo-for-actions/Demo-Repo-for-actions
       - name: Check the folder
         run: |
           pwd
