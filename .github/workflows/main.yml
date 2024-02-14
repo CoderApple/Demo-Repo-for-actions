@@ -1,4 +1,4 @@
-name: Run Unit Test Case and merge
+name: Run Unit Test Case
 on:
   push:
     branches:
@@ -20,4 +20,4 @@ jobs:
           pip install pytest
       - name: Run Unit Tests
         run: |
-          coverage run -m pytest src/tests/
+          coverage run -m pytest CoderApple/Demo-Repo-for-actionssrc/tests/
