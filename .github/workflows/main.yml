@@ -20,9 +20,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install coverage
           pip install pytest
+      - name: Enter the folder
+        run: |
+          git clone https://github.com/CoderApple/Demo-Repo-for-actions.git
+          cd Demo-Repo-for-actions
+        
       - name: Run Unit Tests
         run: |
-          coverage run -m pytest https://github.com/CoderApple/Demo-Repo-for-actions/tree/main/src/tests/test_employee_details.py
+          coverage run -m pytest src/tests/
 
 
 
