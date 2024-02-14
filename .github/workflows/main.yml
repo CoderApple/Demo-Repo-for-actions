@@ -23,11 +23,11 @@ jobs:
       - name: Enter the folder
         run: |
           git clone https://github.com/CoderApple/Demo-Repo-for-actions.git
-          cd Demo-Repo-for-actions
+          cd Demo-Repo-for-actions/src/tests
         
       - name: Run Unit Tests
         run: |
-          coverage run -m pytest src/tests/
+          coverage run -m pytest test_math_operations.py
 
 
 
