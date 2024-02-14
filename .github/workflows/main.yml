@@ -20,7 +20,8 @@ jobs:
           pip install pytest
       - name: Enter the folder
         run: |
-          cd BreadcrumbsDemo-Repo-for-actions/src/tests/
+          git clone https://github.com/CoderApple/Demo-Repo-for-actions.git
+          cd /home/runner/work/Demo-Repo-for-actions/Demo-Repo-for-actions/src/tests
       - name: Check the folder
         run: |
           pwd
