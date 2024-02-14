@@ -13,8 +13,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
-      - name: Debug directory contents
-        run: ls -R
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -24,7 +22,9 @@ jobs:
         run: |
           git clone https://github.com/CoderApple/Demo-Repo-for-actions.git
           cd Demo-Repo-for-actions/src/tests
-        
+      - name: Check the folder
+        run: |
+          pwd
       - name: Run Unit Tests
         run: |
           coverage run -m pytest test_math_operations.py
