@@ -20,4 +20,4 @@ jobs:
           pip install pytest
       - name: Run Unit Tests
         run: |
-          coverage run -m pytest Demo-Repo-for-actions/CoderApple/src/tests/
+          coverage run -m pytest CoderApple/Demo-Repo-for-actions/src/tests/
