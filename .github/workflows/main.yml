@@ -19,7 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd src/tests
           python -m pip install --upgrade pip
           pip install coverage
           pip install pytest
