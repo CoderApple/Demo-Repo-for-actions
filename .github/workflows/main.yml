@@ -25,4 +25,4 @@ jobs:
          cd src/tests/
          pwd
          coverage run -m pytest src/tests/
-        working-directory: ./Demo-Repo-for-actions
+
