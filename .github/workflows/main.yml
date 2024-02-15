@@ -18,16 +18,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install coverage
           pip install pytest
-      - name: Enter the folder
-        run: |
-          git clone https://github.com/CoderApple/Demo-Repo-for-actions.git
-          cd /home/runner/work/Demo-Repo-for-actions/Demo-Repo-for-actions
-      - name: Check the folder
-        run: |
-          pwd
+      - name: Change working directory to src/tests
+        working-directory: ./Demo-Repo-for-actions
+        run: cd src/tests
+      - name: check folder
+        run: pwd
       - name: Run Unit Tests
         run: |
-          coverage run -m pytest test_math_operations.py
-
-
-
+          coverage run -m pytest tests/
