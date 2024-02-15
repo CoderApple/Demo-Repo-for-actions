@@ -36,6 +36,6 @@ jobs:
             echo "Tests failed, not building Docker image."
           fi
         env:
-          DOCKER_USERNAME: ${{ secrets.charanb2001 }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
