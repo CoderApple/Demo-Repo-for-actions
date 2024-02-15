@@ -19,8 +19,8 @@ jobs:
           pip install coverage
           pip install pytest
       - name: Change working directory to src/tests
+        run: cd Demo-Repo-for-actions/src/tests
         working-directory: ./Demo-Repo-for-actions
-        run: cd src/tests
       - name: check folder
         run: pwd
       - name: Run Unit Tests
