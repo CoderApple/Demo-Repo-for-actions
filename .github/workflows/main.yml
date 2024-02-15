@@ -24,4 +24,4 @@ jobs:
         run: |
          cd src/tests/
          pwd
-         coverage run -m pytest test_employee_details.py
+         coverage run -m pytest tests/
