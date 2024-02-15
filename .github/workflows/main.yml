@@ -21,9 +21,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: check folder
-        run: pwd
+        run: |
+         cd src/tests/
+         pwd
 
       - name: Run Unit Tests
         run: |
           coverage run -m pytest tests/
-        working-directory: ./Demo-Repo-for-actions/src/tests
