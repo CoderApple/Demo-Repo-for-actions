@@ -9,9 +9,6 @@ jobs:
     name: Run test cases
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -23,7 +20,8 @@ jobs:
           pip install coverage
           pip install pytest
         working-directory: ./Demo-Repo-for-actions
-
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: check folder
         run: pwd
         working-directory: ./Demo-Repo-for-actions/src/tests
