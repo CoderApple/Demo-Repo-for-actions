@@ -24,7 +24,4 @@ jobs:
         run: |
          cd src/tests/
          pwd
-
-      - name: Run Unit Tests
-        run: |
-          coverage run -m pytest tests/
+         coverage run -m pytest tests/
