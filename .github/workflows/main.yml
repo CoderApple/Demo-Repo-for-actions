@@ -26,16 +26,4 @@ jobs:
          cd src/tests/
          coverage run -m pytest test_math_operations.py test_employee_details.py
 
-      - name: Check test results
-        run: |
-          if [ $? -eq 0 ]; then
-            echo "Tests passed, building Docker image..."
-            docker build -t charanb2001/sample_image .
-            docker push charanb2001/sample_image
-          else
-            echo "Tests failed, not building Docker image."
-          fi
-        env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
