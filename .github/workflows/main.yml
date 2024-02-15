@@ -24,5 +24,5 @@ jobs:
         run: |
          cd src/tests/
          pwd
-         coverage run -m pytest src/tests/
+         coverage run -m pytest test_math_operations.py
 
