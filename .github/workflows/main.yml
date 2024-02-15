@@ -30,8 +30,8 @@ jobs:
         run: |
           if [ $? -eq 0 ]; then
             echo "Tests passed, building Docker image..."
-            docker build -t charanb2001/your_image_name .
-            docker push charanb2001/your_image_name
+            docker build -t charanb2001/sample_image .
+            docker push charanb2001/sample_image
           else
             echo "Tests failed, not building Docker image."
           fi
