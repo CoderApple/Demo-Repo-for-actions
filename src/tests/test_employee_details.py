@@ -1,4 +1,4 @@
-from src.dev.employee_details import employees,view_employee,add_employee,delete_employee
+from ..dev.employee_details import employees, view_employee, add_employee, delete_employee
 
 
 
