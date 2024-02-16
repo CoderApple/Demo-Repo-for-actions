@@ -21,9 +21,18 @@ jobs:
           pip install coverage
           pip install pytest
 
-      - name: check folder
+      - name: Get into Directory
         run: |
          cd src/tests/
-         coverage run -m pytest test_math_operations.py test_employee_details.py
+      - name: Run the test cases
+        run: coverage run -m pytest test_math_operations.py test_employee_details.py
+      - name: Pull SonarQube Docker Image
+        run: docker pull sonarqube:latest
+
+      - name: Start SonarQube Server
+        run: docker run -d --name sonarqube -p 9000:9000 sonarqube
+
+      - name: generate a sonarqube report
+        run: sonar-scanner.bat -D"sonar.projectKey=Demo-project" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.token=sqb_f52d21c2f2ae51a44bf5ed8c2eac509ca01e79af"
 
 
