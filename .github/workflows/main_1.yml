@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          coverage report -m > coverage.txt
+          coverage report -m
           coverage html -d coverage_html
 
       - name: Upload coverage report
