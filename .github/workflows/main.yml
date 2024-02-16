@@ -35,8 +35,8 @@ jobs:
       - name: Check SonarQube Docker Image
         run: docker images
 
-      # - name: Run SonarQube Server
-      #   run: docker run -d --name sonarqube -p 9000:9000 sonarqube
+      - name: Run SonarQube Server
+        run: docker run -d --name sonarqube -p 9000:9000 sonarqube
       - name: Start SonarQube Server
         run: docker start sonarqube
 
