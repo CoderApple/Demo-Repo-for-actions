@@ -26,9 +26,7 @@ jobs:
       - name: Get into Directory
         run: |
          cd src/tests/
-
-      - name: Run the test cases
-        run: coverage run -m pytest test_math_operations.py test_employee_details.py
+         coverage run -m pytest test_math_operations.py test_employee_details.py
 
 
       - name: Pull SonarQube Docker Image
