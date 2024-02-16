@@ -31,8 +31,10 @@ jobs:
       - name: Pull SonarQube Docker Image
         run: docker pull sonarqube:latest
 
-      - name: Start SonarQube Server
+      - name: Run SonarQube Server
         run: docker run -d --name sonarqube -p 9000:9000 sonarqube
+      - name: Start SonarQube Server
+        run: docker start sonarqube
 
       - name: generate a sonarqube report
         run: sonar-scanner -D"sonar.projectKey=Demo-project" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqb_f52d21c2f2ae51a44bf5ed8c2eac509ca01e79af"
