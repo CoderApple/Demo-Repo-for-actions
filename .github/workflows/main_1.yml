@@ -59,6 +59,7 @@ jobs:
       - name: Check branch and push
         run: |
           git branch
-          git add coverage_html
-          git commit -m "Add coverage report"
+          git status
+          # git add coverage_html
+          # git commit -m "Add coverage report"
           git push origin main
