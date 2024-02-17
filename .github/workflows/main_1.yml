@@ -32,7 +32,7 @@ jobs:
           
       - name: List coverage report files
         run: |
-            cd src
+            cd src/tests
             ls
         
       - name: Upload coverage report
