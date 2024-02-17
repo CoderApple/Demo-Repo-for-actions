@@ -49,6 +49,8 @@ jobs:
         with:
           name: coverage-report
           path: coverage_html
+      - name: Check files
+        run: ls
 
       - name: Commit and push coverage report
         run: |
