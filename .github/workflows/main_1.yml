@@ -27,7 +27,7 @@ jobs:
         run: |
           cd src/tests/
           coverage run -m pytest test_math_operations.py test_employee_details.py
-          coverage report -m
+          coverage report -m > coverage.txt
           coverage html -d coverage_html
           
 
