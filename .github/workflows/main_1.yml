@@ -31,7 +31,9 @@ jobs:
           coverage html -d coverage_html
           
       - name: List coverage report files
-        run: ls
+        run: |
+            cd src
+            ls
         
       - name: Upload coverage report
         uses: actions/upload-artifact@v2
