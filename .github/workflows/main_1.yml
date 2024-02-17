@@ -54,6 +54,8 @@ jobs:
 
       - name: Commit and push coverage report
         run: |
-          git add coverage_html
-          git commit -m "Add coverage report"
+          git config --global user.name 'CoderApple'
+          git config --global user.email 'charanb0410@gmail.com'
+          # git add coverage_html
+          # git commit -m "Add coverage report"
           git push origin main
