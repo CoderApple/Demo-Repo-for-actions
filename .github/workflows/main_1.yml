@@ -34,8 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: coverage-report
-          run: cd src/tests/
-          path: coverage_html
+          path: src/tests/coverage_html
 
   push-coverage:
     name: Push coverage report
@@ -57,6 +56,6 @@ jobs:
         run: |
           git config user.name 'CoderApple'
           git config user.email 'charanb0410@gmail.com'
-          # git add coverage_html
-          # git commit -m "Add coverage report"
+          git add coverage_html
+          git commit -m "Add coverage report"
           git push origin main
