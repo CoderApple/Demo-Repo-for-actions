@@ -60,6 +60,8 @@ jobs:
         run: |
           git branch
           git status
-          # git add coverage_html
-          # git commit -m "Add coverage report"
-          git push origin main
+          git checkout -b Coverage-report
+          git status
+          git add coverage_html
+          git commit -m "Add coverage report"
+          git push origin Coverage-report
