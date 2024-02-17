@@ -29,6 +29,10 @@ jobs:
           coverage run -m pytest test_math_operations.py test_employee_details.py
           coverage report -m > coverage.txt
           coverage html -d coverage_html
+          
+      - name: List coverage report files
+        run: ls -R coverage_html
+        
       - name: Upload coverage report
         uses: actions/upload-artifact@v2
         with:
